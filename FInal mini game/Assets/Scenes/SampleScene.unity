@@ -372,6 +372,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!1 &332131290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 332131291}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &332131291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332131290}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570816731
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +414,7 @@ GameObject:
   - component: {fileID: 570816732}
   - component: {fileID: 570816734}
   - component: {fileID: 570816733}
+  - component: {fileID: 570816735}
   m_Layer: 5
   m_Name: Coin Text Counter
   m_TagString: Untagged
@@ -506,6 +538,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570816731}
   m_CullTransparentMesh: 1
+--- !u!114 &570816735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570816731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89e14101cdb841d784d6b0f5f155771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinCountText: {fileID: 570816733}
+  coins: 0
 --- !u!1 &601670051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d47b3f693d6143308b1cdfffb7200a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinSound: {fileID: 8300000, guid: 4030a068d36f4456cbb8aa7baa28f446, type: 3}
 --- !u!1 &2092692181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,3 +1204,4 @@ SceneRoots:
   - {fileID: 1714105823}
   - {fileID: 50213991}
   - {fileID: 2092692184}
+  - {fileID: 332131291}
