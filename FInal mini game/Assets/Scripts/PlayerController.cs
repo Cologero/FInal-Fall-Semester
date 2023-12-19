@@ -17,11 +17,10 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-   
-    {
+   {
         _playerRb = GetComponent<Rigidbody>();
         _playerAudio = GetComponent<AudioSource>();
-        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -49,6 +48,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        _playerAudio.PlayOneShot(zombieSound, 1f);
+        if (other.gameObject.CompareTag("Zombie"))
+        {
+            _playerAudio.PlayOneShot(zombieSound, 1f);
+        }
+       
     }
 }
